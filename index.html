@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AniMori - Streaming Anime</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <nav class="nav">
+        <div class="brand">
+          <span class="brand__logo">AM</span>
+          <span class="brand__name">AniMori</span>
+        </div>
+        <div class="nav__actions">
+          <button class="ghost">Favorit</button>
+          <button class="primary">Mulai Nonton</button>
+        </div>
+      </nav>
+
+      <div class="hero__content">
+        <div class="hero__text">
+          <p class="pill">Powered by Otakudesu API</p>
+          <h1>
+            Streaming anime yang imersif, cepat, dan penuh rasa.
+          </h1>
+          <p class="subtitle">
+            Temukan episode terbaru, rekomendasi ongoing, dan katalog lengkap dengan
+            tampilan sinematik yang bikin betah.
+          </p>
+          <form class="search" role="search">
+            <input
+              type="search"
+              id="search-input"
+              name="search"
+              placeholder="Cari judul anime, studio, atau genre..."
+              autocomplete="off"
+            />
+            <button type="submit" class="primary">Cari Anime</button>
+          </form>
+          <div class="hero__cta">
+            <button class="primary">Jelajahi Sekarang</button>
+            <button class="ghost">Lihat Jadwal</button>
+          </div>
+          <div class="stats">
+            <div>
+              <span class="stat__value" id="stat-ongoing">--</span>
+              <span class="stat__label">Ongoing</span>
+            </div>
+            <div>
+              <span class="stat__value" id="stat-complete">--</span>
+              <span class="stat__label">Completed</span>
+            </div>
+            <div>
+              <span class="stat__value" id="stat-episode">--</span>
+              <span class="stat__label">Episode Update</span>
+            </div>
+          </div>
+          <p class="data-source" id="data-source">Sumber data: Memuat...</p>
+        </div>
+        <div class="hero__visual">
+          <div class="glass-card">
+            <h3>Trending Hari Ini</h3>
+            <ul id="trending-list" class="mini-list"></ul>
+          </div>
+          <div class="glass-card highlight">
+            <h3>Update Terbaru</h3>
+            <p id="latest-episode">Memuat data...</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="section">
+        <div class="section__header">
+          <div>
+            <p class="eyebrow">Ongoing</p>
+            <h2>Rilis Minggu Ini</h2>
+          </div>
+          <button class="ghost">Lihat Semua</button>
+        </div>
+        <div class="card-grid" id="ongoing-grid"></div>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <div>
+            <p class="eyebrow">Complete</p>
+            <h2>Maraton Sekalian</h2>
+          </div>
+          <button class="ghost">Lihat Semua</button>
+        </div>
+        <div class="card-grid" id="complete-grid"></div>
+      </section>
+
+      <section class="section banner">
+        <div>
+          <h2>Jadwal Rilis Otomatis</h2>
+          <p>
+            Dapatkan notifikasi episode baru, rekomendasi personal, dan daftar
+            tonton yang terkurasi.
+          </p>
+        </div>
+        <button class="primary">Aktifkan Reminder</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <h3>AniMori</h3>
+        <p>Streaming anime dengan tampilan premium.</p>
+      </div>
+      <div class="footer__links">
+        <span>API: otakudesu</span>
+        <span>Support: hello@animori.id</span>
+        <span>Komunitas</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
